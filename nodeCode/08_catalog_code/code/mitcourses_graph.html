@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<script src="d3.v3.min.js"></script>
+<script src="d3.tip.js"></script>
+<script src="mitcourses_one.js"></script>
+<script src="mitcourses_graph.js"></script>
+<link rel="stylesheet" href="styles-example.css">
+<body>
+<div id="target"></div>
+</body>
+<script>
+
+// add rss to page - DOM treats it as new HTML
+document.getElementById('target').innerHTML = mitcourses;
+
+// NodeList of news items
+var list = document.getElementsByTagName('h3');
+
+// convert from NodeList to array
+list = Array.prototype.slice.call(list);
+
+// get the titles
+var titles = list.map(function(node){
+	return node.innerText;
+});
+
+// filter out punctuation/numbers, make words array
+var words = titles.map(function(node){
+	return node.toLowerCase().match(/([a-z]+)/g);
+});
+
+// lets flatten the 2D words array using reduce
+var wordsFlat = words.reduce(function(previous, current) {
+    return previous.concat(current);
+}, []);
+
+// count the word frequency
+var removables = {"and":1,"if":1, "in":1,"of":1, "to":1,"ii":1, "new":1,"for":1,"i":1,"j":1,"a":1,"b":1,"with":1,"trex":1,"meng":1,"the":1};
+var scores = wordsFlat.reduce(function(previous, current) {
+	if(current in removables)
+		return previous;
+
+  	if (current in previous) {
+		previous[current] += 1;
+  	}
+  	else{
+		previous[current] = 1;
+  	}
+
+    return previous;
+
+  }, {});
+
+// visualize data
+graph();
+
+</script>
+
+</html>
