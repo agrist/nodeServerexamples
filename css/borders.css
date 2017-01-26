@@ -1,0 +1,49 @@
+section {
+background: grey;
+height: 150px;
+width: 300px;
+border: 1px solid green;
+background: radial-gradient(red, yelow);
+#	background: linear-gradient(to left, grey, navy);
+border-top-right-radius: 15px;
+#border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+#border-top-left-radius: 10px
+}
+
+li {
+	text-shadow: 1px 2px 2px #000;
+}
+
+.menu {
+    width: 20%;
+    float: left;
+    padding: 15px;
+    border: 1px solid blue;
+	
+	#border-radius: <top left> <top right> <bottom right> <bottom left>
+	#border-radius: 4px 35px 12px 10px;
+	#transform: rotate(45deg);
+	
+	transition: background-color 0.5s ease-in-out 0.1s;
+}
+.menu:hover {
+	background-color: orange;
+
+}
+
+.form {
+    width: 70%;
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+	
+}
+.header {
+    border: 1px solid red;
+    padding: 15px;
+	background: linear-gradient(to bottom, red, yellow);
+	opacity: 0.45;
+	transform: scale(1.2);
+	
+}
