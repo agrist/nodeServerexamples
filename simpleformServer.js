@@ -6,7 +6,7 @@ const port = 8090;
 
 app.use(express.static('public'));
 app.get('/', function (req, res) {
-   res.sendFile( __dirname + "/" + "simpleform.htm" );
+   res.sendFile( __dirname + "/html/" + "simpleform.htm" );
 })
 
 app.get('/process_get', function (req, res) {

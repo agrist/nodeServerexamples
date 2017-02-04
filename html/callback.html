@@ -4,9 +4,9 @@
 
 var list = [ 5,8,9,2,7,6,3,1,4];
 
-function callback(list) {
+function whateverName(list) {
 	var newList = [];
-	
+
 	for (var i=0; i < list.length; i++) {
 		if(list[i]>5){
 			console.log(list[i])
@@ -20,7 +20,7 @@ function filter(list, callback) {
 	return callback(list);
 }
 
-var filtered = filtered = filter(list, callback);
+var filtered = filter(list, whateverName);
 console.log(filtered);
 
 </script>
