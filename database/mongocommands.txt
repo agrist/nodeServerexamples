@@ -1,0 +1,2 @@
+use testapp
+mongoimport --db testapp --collection users --drop --jsonArray --file users.json
