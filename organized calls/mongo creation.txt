@@ -1,0 +1,25 @@
+https://www.tutorialspoint.com/mongodb/mongodb_environment.htm
+
+echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen'  | sudo tee /etc/apt/sources.list.d/mongodb.list
+
+
+sudo service mongod start
+mongo
+use forshow
+db.forshowUsers.insert({name:'agrist', pass:'pass', level: 1})
+
+
+
+
+for retrieving
+npm install mongoose --save-dev
+
+for import file to mongo
+mongoimport --db name -- collection --jsonArray --file data_users.json
+
+for finding all: 
+show collections
+db.forshowUsers.find()
+db.forshowUsers.find({'password':'dwarf2'})
+db.forshowUsers.find({'id':{$gt:1,$lt:3}})
+db.forshowUsers.find({'id':{$gte:1,$lte:3}})

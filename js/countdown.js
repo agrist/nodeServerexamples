@@ -23,14 +23,14 @@ counter.countdown = function(timingobj , callback){
                           count = 0;
                           clearInterval(interval);
                           // if synchronity is an issue
-                          //  if(callback !== undefined){callback(startAt, endAt);  }
+                            if(callback !== undefined){callback(startAt, endAt);  }
                       }
                     }, 1000);
             }
       }
-      if(callback !== undefined){
-        callback(startAt, endAt);
-      }
+  //    if(callback !== undefined){
+  //      callback(startAt, endAt);
+  //    }
 };
 
 //counter.countdown({startAt:10, endAt:20});

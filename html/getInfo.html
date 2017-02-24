@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>  How to call service API  </title>
+  </head>
+  <body>
+<!-- <form  action = "http://127.0.0.1:8090/seeSecuretext" method = "POST"> -->
+<form id="userform" action="http://127.0.0.1:8090/seeSecuretext" method="POST">
+  Username <input type = "text" name="username">  <br>
+  Password: <input type = "password" name="password">
+  <input type = "submit" value = "Submit">
+</form>
+
+ <button type="button" onclick="JSONTest()">Click Me for API call!</button>
+
+    <div id="endResult"> </div>
+
+<!-- be careful with the loading order and conectivity-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="../js/dataCallExample.js"></script>
+  </body>
+</html>

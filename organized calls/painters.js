@@ -1,0 +1,1 @@
+Norwegian painter Edvard Munch is widely known for his iconic pre-Expressionist painting "The Scream" ("The Cry").

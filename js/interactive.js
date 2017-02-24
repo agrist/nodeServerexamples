@@ -1,5 +1,5 @@
 var app = {};
-
+var test = '123';
 app.getElement = function(element){
     return document.getElementById(element);
 }
