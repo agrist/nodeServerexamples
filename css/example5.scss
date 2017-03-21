@@ -1,0 +1,39 @@
+$green: #0f0;
+$purple: #800080;
+$teal: #008080;
+$dark-grey: #222;
+$grey:#ccc;
+
+
+$type: error;
+
+.p-if{
+background-color: $grey;
+//we can also do the same preparation as in previous example
+//but with just if-else statements (for single entry point)
+@if $type == info {
+  color: $grey;
+}@else if $type == success{
+  color: $green;
+}@else if $type == warning {
+  color: $teal;
+}@else if $type == error{
+  color: $purple;
+}
+
+}
+
+@for $i from 1 through 3 {
+  .li-#{$i} {font-size: #{9 * $i}px;}
+}
+
+$i: 4;
+@while $i <=6{
+  .li-#{$i} {font-size: #{5 * $i}px;
+    $i: $i+1;
+  }
+}
+
+@each $col in green,teal,purple{
+  .color-#{$col} {    color: $col  };
+}

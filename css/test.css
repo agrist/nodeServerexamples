@@ -1,0 +1,28 @@
+ul {
+  list-style: none;
+  margin: 10;
+  padding: 1; }
+  ul li {
+    margin-top: 10;
+    display: inline;
+    background-color: #bbb;
+    text-decoration: none;
+    padding: 3px;
+    color: #fff;
+    border: 1px solid #222; }
+
+p {
+  height: 10;
+  margin: auto; }
+  @media screen and (max-width: 1200px) {
+    p {
+      width: 50%;
+      background-color: green; } }
+  @media screen and (max-width: 750px) {
+    p {
+      width: 75%;
+      background-color: red; } }
+  @media screen and (max-width: 500px) {
+    p {
+      width: 90%;
+      background-color: blue; } }

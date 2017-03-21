@@ -1,0 +1,16 @@
+$ht:10;//this is just partial copy from example2
+ul {
+    list-style: none;
+    margin: $ht;
+    padding: 1;
+
+    li {
+        margin-top: $ht;
+        display: inline;
+        background-color: #bbb;
+        text-decoration: none;
+        padding: 3px;
+        color: #fff;
+        border: 1px solid #222; 
+    }
+}

@@ -1,0 +1,24 @@
+//Sass has multiple recognized data types
+//$name is a variable notation
+$margin: 0;// number
+$some-text: "hello world";//String
+$bg-color: #ccc;//color
+$flag: true;//Boolean
+$other-number: 10px;//also considered a number
+
+//to use variables just write the $name
+//this allows for multiple reuse cases where in case of changes
+//only one entry point has to be changed
+body {
+    margin: $margin;
+    background-color: $bg-color;
+}
+
+.sometxt:after {
+    content: $some-text;
+//to use functionals/conditionals - use the key @name
+//as usual in all programming languages - conditionals work on booleans
+    @if $flag {
+        color: #f00;
+    }
+}

@@ -1,0 +1,13 @@
+//example how to divide into modules the Sass code - use imports
+@import 'partial3';
+//the actual files have to be named as "_name.scss" and have to be in the same folder
+@import 'dynamic';
+//imports don't have separate "namespaces" so they can use the same variables
+// watch out for that! or use to your advantage by creating oneimport with all variable definitions
+//to get the final code - compile this file
+
+
+
+//generate some extra sass conditions before compiling
+//also try to put in some code inbetween the imports to see how the generated css handles it
+//
