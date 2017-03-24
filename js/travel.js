@@ -30,3 +30,20 @@ var app = {
     }
 
 };
+
+(function() {
+    var msg = "There is no place like home, but you should look around just to make sure! :) Just like Spriditis did - and he got married because out of that!",
+        len = 50,
+        padding = msg.replace(/./g, " ").substr(0, len),
+        printText = padding + msg,
+        pos = 0;
+
+    function rollText() {
+        var curText = printText.substr(pos++, len);
+        document.getElementById("rollingText").innerText = curText;
+        if (pos == printText.length) {
+            pos = 0;
+        }
+    }
+    setInterval(rollText, 150);
+})();

@@ -1,0 +1,11 @@
+#rollingText {
+  width: 380px;
+  background-color: silver;
+  color: #000080;
+}
+body {
+  margin-left: 50px;
+  margin-top: 70px;
+  background-color: DimGrey;
+  color: GhostWhite;
+}
