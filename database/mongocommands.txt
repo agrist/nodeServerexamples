@@ -1,2 +1,2 @@
 use testapp
-mongoimport --db testapp --collection users --drop --jsonArray --file users.json
+mongoimport --db forshow --collection users --drop --jsonArray --file users.json

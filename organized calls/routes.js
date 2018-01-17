@@ -1,7 +1,8 @@
 module.exports = function(app){
  var painters = require('./controllers/painters');
     app.get('/painters', painters.findAll);
-    app.get('/painters/:id', painters.findById);
+    app.get('/painterID/:id', painters.findById);
+    app.get('/painters/:style', painters.findByStyle);
     app.post('/painters', painters.add);
     app.put('/painters/:id', painters.update);
     app.delete('/painters/:id', painters.delete);

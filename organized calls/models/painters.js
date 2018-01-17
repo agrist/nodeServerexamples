@@ -4,7 +4,8 @@ Schema = mongoose.Schema;
 var PainterSchema = new Schema({
   name: String,
   style: String,
-  century: String
+  birthy: Number,
+  deathy: Number
 });
 
 mongoose.model('Painter', PainterSchema);
