@@ -5,15 +5,16 @@
 
 Html files can be viewed independently (look into console for the advanced examples)
 
-Sequence to go through javascript files (note - some will need dependency download):
-  1. - simpleformServer.js
-  2. - staticFolder.js
-  3. - js folder, main and serve
-  4. - nodeCode folder content as numbered
-  5. - organized calls folder launch server.js and look in the general structure and loading sequence
+## Sequence to go through javascript files:
+ (note - some will need dependency download)
+  1. simpleformServer.js
+  2. staticFolder.js
+  3. js folder, main and serve
+  4. nodeCode folder content as numbered
+  5. organized calls folder launch server.js and look in the general structure and loading sequence
 
 
-### Recommended additional documentation sources:
+## Recommended additional documentation sources:
   * git : https://anotheruiguy.gitbooks.io/gitforeveryone/
   * Eloquent Javascript book: http://eloquentjavascript.net/Eloquent_JavaScript.pdf
   * NodeJS documentation: https://nodejs.org/en/docs/
