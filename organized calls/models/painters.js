@@ -5,7 +5,9 @@ var PainterSchema = new Schema({
   name: String,
   style: String,
   birthy: Number,
-  deathy: Number
+  deathy: Number,
+  notes: {type: String, default: "No notes yet"},
+  ledit: {type: Date, default: Date.now}
 });
 
 mongoose.model('Painter', PainterSchema);

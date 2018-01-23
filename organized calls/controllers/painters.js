@@ -15,6 +15,10 @@ exports.findByStyle = function(req, res) {
     Painter.find({'style': req.params.style},function(err, results){return res.send(results);});
 };
 
-exports.add = function(req, res) {};
+exports.add = function(req, res) {
+    var painter = mongoose.model('Painter', Painter);
+  //  painter.
+  //  Painter.insert
+};
 exports.update = function(req, res) {};
 exports.delete = function(req, res) {};
