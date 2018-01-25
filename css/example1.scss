@@ -19,6 +19,7 @@ body {
 //to use functionals/conditionals - use the key @name
 //as usual in all programming languages - conditionals work on booleans
     @if $flag {
+        @debug "Flag is set to true!"
         color: #f00;
     }
 }

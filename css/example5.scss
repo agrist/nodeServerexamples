@@ -1,28 +1,34 @@
-$green: #0f0;
-$purple: #800080;
-$teal: #008080;
 $dark-grey: #222;
 $grey:#ccc;
+//maps can be used for a multitude of variables
+$cols:("success": #0f0, "purple": #800080,"teal": #008080, "error" : #8B0000, "warning": #FFE63B );
 
-
-$type: error;
+$type: warning;
 
 .p-if{
 background-color: $grey;
 //we can also do the same preparation as in previous example
 //but with just if-else statements (for single entry point)
-@if $type == info {
-  color: $grey;
-}@else if $type == success{
-  color: $green;
-}@else if $type == warning {
-  color: $teal;
-}@else if $type == error{
-  color: $purple;
-}
+  @if $type == info {
+    color: $grey;
+  }@else if $type == success{
+    @debug "All good here"
+    color: map-get($cols, "green");
+  }@else if $type == warning {
+    @warn "There is some warnings found!"
+    color: map-get($cols, "yellow");
+  }@else if $type == error{
+    @warn "There is some error found!!"
+    color: map-get($cols, "red");
+  }
 
 }
 
+.h1{
+    color: map-get($cols, $type);
+}
+
+//multiple sets can be created within loops
 @for $i from 1 through 3 {
   .li-#{$i} {font-size: #{9 * $i}px;}
 }
@@ -34,6 +40,6 @@ $i: 4;
   }
 }
 
-@each $col in green,teal,purple{
-  .color-#{$col} {    color: $col  };
+@each $col, $value in $cols{
+  .color-#{$col} {    color: $value  };
 }

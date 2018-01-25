@@ -3,6 +3,8 @@ $grey: #ccc;
 $red: #f00;
 $green: #0f0;
 $yellow: #ff0;
+$weight:500;
+$size: 18px;
 
 .left-text {
   text-align: left;
@@ -28,6 +30,14 @@ $yellow: #ff0;
     height: 50px;
     border: 1px solid $dark-grey;
     border-radius: 10px;
+    .my-i{
+      font-style: italic;
+      font-size:$size;
+    }
+    .my-b{
+      font-weight: $weight;
+      font-size:$size;
+    }
 }
 
 .info {
@@ -39,12 +49,28 @@ $yellow: #ff0;
   @extend .left-text;
     @extend .message;
     background-color: $green;
+      .my-i{
+        font-style: italic;
+        font-size:$size;
+      }
+      .my-b{
+        font-weight: $weight;
+        font-size:$size + 2px;
+      }
 }
 
 .error {
     @extend .message;
     @extend .right-text;
     background-color: $red;
+    .my-i{
+      font-style: italic;
+      font-size:$size - 2px;
+    }
+    .my-b{
+      font-weight: $weight -50;
+      font-size:$size;
+    }
 }
 
 .warning {

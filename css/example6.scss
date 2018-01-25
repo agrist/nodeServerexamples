@@ -1,0 +1,30 @@
+$grey:#ccc;
+$cols:("green": #0f0, "purple": #800080,"teal": #008080, "red" : #8B0000, "yellow": #FFE63B );//, "baseColor": #A2A06A, "opositeColor": #384E5A, "complimentary": #88594F );
+//you can also define custom functions inside sass to be used in code
+//this is a small utiity function to make life a bit easier using maps call in shorter format, see below for usage
+@function cols($key) {
+  @if map-has-key($cols, $key) {
+    @return map-get($cols, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return $grey;
+}
+
+//nultiple lists can be used within one loop using the "nth" function
+$background-colors-list: #4BC2A5 #606F40 #6648CA #6B6022 #2F54E9;
+$border-colors-list: #ff9900 #77ff66 #73C227 #C23E50 #7BAFC2;
+$colors-list: #111 #222 #111 #444 #555;
+@each $current-color in $colors-list {
+    $i: index($colors-list, $current-color);
+    .element-#{$i} {
+        color: $current-color;
+        background-color: nth($background-colors-list, $i);
+        border: 1px solid nth($border-colors-list, $i);
+    }
+}
+
+body {//custom function usage vs standart approach - both do the same thing
+    margin: cols("purple");
+    background-color: map-get($cols,"green");
+}
