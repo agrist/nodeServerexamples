@@ -1,0 +1,54 @@
+//mixins usage vs extend usage
+
+//mixins are not standalone - they are not resolved to be seen in the end css
+@mixin rounded_border($add_rad) {
+  border-radius: 10px + $add_rad;
+}
+
+@mixin centered_text{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 25px;
+}
+
+@mixin my_border($add_rad){
+  border: 1px+$add_rad solid #ccc;
+  //nested mixins
+  @include rounded_border($add_rad)
+}
+
+.my-div {
+  //include all needed mixins before the specific additional code
+  @include my_border(2px);
+  @include centered_text;
+background-color: #0f0;
+height: 120px;
+width: 90%;
+
+}
+
+//extend is used for repeateable code that also has to be used as standalone code
+.btn,
+%btn {
+    display: inline-block;
+    padding: 1em;
+}
+
+.btn-positive {
+    @extend %btn;
+    background-color: green;
+    color: white;
+}
+
+.btn-negative {
+    @extend %btn;
+    @include rounded_border(0px);
+    background-color: red;
+    color: white;
+}
+
+.btn-neutral {
+    @extend %btn;
+    background-color: lightgray;
+    color: black;
+}
