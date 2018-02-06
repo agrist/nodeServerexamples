@@ -11,7 +11,7 @@ var app = {
             if (this.counter > 7) {
                 this.counter = 1;
             }
-            image.src = "images/" + this.counter + ".jpg";
+            image.src = "../images/" + this.counter + ".jpg";
 
             console.log('changed to image#' + this.counter);
             this.updateText(text, this.counter);

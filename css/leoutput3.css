@@ -1,0 +1,71 @@
+div {
+  backgrounf-color: #ccc;
+}
+.blue,
+div {
+  color: blue;
+}
+.left-text,
+.success {
+  text-align: left;
+  vertical-align: top;
+  line-height: 30px;
+}
+.centered-text {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+.right-text {
+  text-align: right;
+  vertical-align: bottom;
+  line-height: 80px;
+}
+.message,
+.info,
+.success {
+  @extend .centered-text;
+  margin: 10px;
+  height: 50px;
+  border: 1px solid #222;
+  border-radius: 10px;
+}
+.message .my-i {
+  font-style: italic;
+  font-size: 18px;
+}
+.message .my-b {
+  font-weight: 500;
+  font-size: 18px;
+}
+.info {
+  background-color: #ccc;
+}
+.success {
+  background-color: #0f0;
+}
+.success .my-i {
+  font-style: italic;
+  font-size: 18px;
+}
+.success .my-b {
+  font-weight: 500;
+  font-size: 20px;
+}
+.error {
+  @extend .message;
+  @extend .right-text;
+  background-color: #f00;
+}
+.error .my-i {
+  font-style: italic;
+  font-size: 16px;
+}
+.error .my-b {
+  font-weight: 500 -50;
+  font-size: 18px;
+}
+.warning {
+  @extend .message;
+  background-color: #ff0;
+}

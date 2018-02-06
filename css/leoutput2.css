@@ -1,0 +1,29 @@
+p {
+  color: #6c94be;
+}
+ul {
+  list-style: none;
+  margin: 10;
+  padding: 1;
+}
+ul li {
+  margin-top: 10;
+  display: inline;
+  text-decoration: underline;
+}
+ul li a {
+  background-color: #bbb;
+  text-decoration: none;
+  padding: 3px;
+  color: #fff;
+  border: 1px solid #222;
+}
+ul li a:hover {
+  background-color: #ddd;
+}
+.additional_div {
+  background-color: #ddd;
+  color: #bbb;
+  height: 200px;
+  width: 75%;
+}

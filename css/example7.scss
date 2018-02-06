@@ -36,14 +36,14 @@ width: 90%;
 
 .btn-positive {
     @extend %btn;
-    background-color: green;
+    background-color: rgb(40, 200, 40);
     color: white;
 }
 
 .btn-negative {
     @extend %btn;
     @include rounded_border(0px);
-    background-color: red;
+    background-color: rgb(200, 40, 40);
     color: white;
 }
 

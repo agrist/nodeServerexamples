@@ -1,0 +1,46 @@
+@ten: 10;
+@color_one: #bbb;
+@color_two: #ddd;
+
+//variables are actually constants in that that they can be only defined once
+@nice_blue: #5B83AD;
+
+@light-blue: @nice_blue + #111;
+
+p {
+  color: @light-blue;
+}
+
+ul{
+  list-style: none;
+  margin: @ten;
+  padding: 1;
+
+  li{
+    margin-top: @ten;
+    display: inline;
+    text-decoration: underline;
+    a{
+      background-color: @color_one;
+      text-decoration: none;
+      padding: 3px;
+      color: #fff;
+      border: 1px solid #222;
+      &:hover{
+        background-color: #ddd;
+      }
+    }
+  }
+}
+
+//using variables in selector names is possible
+@selector: additional_div;
+
+.@{selector} {
+  background-color: @color_two;
+  color: @color_one;
+  height: 200px;
+  width: @example_width;
+}
+//since less is lazy loading you can assign values anywhere in the file
+@example_width: 75%;
