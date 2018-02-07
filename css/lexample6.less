@@ -1,0 +1,18 @@
+//mixins have different merge options:
+  //comma
+.mixin() {
+  box-shadow+: inset 0 0 10px #555;
+}
+.myclass {
+  .mixin();
+  box-shadow+: 0 0 20px black;
+}
+
+  //space
+.mixin2() {
+  transform+_: scale(2);
+}
+.myclass {
+  .mixin2();
+  transform+_: rotate(15deg);
+}

@@ -1,11 +1,12 @@
+.blue{
+  color: blue;
+}
+
+
 div{
   //simple extension or inclusion of another existing class
   &:extend(.blue);
   backgrounf-color: #ccc;
-}
-
-.blue{
-  color: blue;
 }
 
 
@@ -28,15 +29,15 @@ div{
   vertical-align: middle;
   line-height: 50px;
 }
-
-.right-text{
+//will not be generated as independent class
+.right-text(@rules) {
+  @rules();
   text-align: right;
   vertical-align: bottom;
   line-height: 80px;
 }
 
-.message {
-  @extend .centered-text;
+.message:extend(.centered-text) {
     margin: 10px;
     height: 50px;
     border: 1px solid @dark-grey;
@@ -54,7 +55,8 @@ div{
 .info:extend(.message) {
     background-color: @grey;
 }
-
+//extends after generating code,thus the following would not work:
+//.success:extend(.right-text, .message)
 .success:extend(.left-text, .message) {
   //extending more than one class
   background-color: @green;
@@ -69,9 +71,10 @@ div{
 }
 
 .error {
-    @extend .message;
-    @extend .right-text;
-    background-color: @red;
+    .message;
+    //even specific definitions ca be passed as parameters to mixin functions
+    .right-text({  background-color: @red;});
+
     .my-i{
       font-style: italic;
       font-size: @size - 2px;
@@ -83,6 +86,6 @@ div{
 }
 
 .warning {
-    @extend .message;
+    .message;
     background-color: @yellow;
 }

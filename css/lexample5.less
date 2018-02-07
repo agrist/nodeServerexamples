@@ -1,0 +1,49 @@
+@dark_grey: #222;
+@grey:#ccc;
+
+
+@typeToSend: 'info';
+
+
+//mixin guards can be used as conditionals
+
+.my_color (@type) when (@type = 'warning'){
+  color: #FFE63B;
+}
+.my_color (@type) when (@type = 'success'){
+  color: #0f0;
+}
+.my_color (@type) when (@type = 'info'){
+  color: #ccc;
+}
+.my_color (@type) when (@type = 'error'){
+  color: #8B0000;
+}
+
+.p-if{
+  background-color: @dark_grey;
+  .my_color(@typeToSend);
+}
+
+.h1{
+  .my_color(@typeToSend);
+}
+//recursive function call to create a for loop
+.create_listitems(@n,@times, @i : 1) when (@i =< @n){
+  .li-@{i} {
+    font-size: (@i * @times)px;
+  }
+  .create_listitems(@n, @times, (@i + 1));
+}
+//actual call that creates the list items
+.create_listitems(3,9);
+
+
+.loop(@counter) when (@counter > 3){
+  .loop((@counter - 1));
+  .li-@{counter} {
+    font-size: (@counter * 5)px;
+  }
+}
+
+.loop(6);

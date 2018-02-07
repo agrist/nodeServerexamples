@@ -1,4 +1,4 @@
-$dark-grey: #222;
+$dark_grey: #222;
 $grey:#ccc;
 //maps can be used for a multitude of variables
 $cols:("success": #0f0, "purple": #800080,"teal": #008080, "error" : #8B0000, "warning": #FFE63B );
@@ -6,7 +6,7 @@ $cols:("success": #0f0, "purple": #800080,"teal": #008080, "error" : #8B0000, "w
 $type: warning;
 
 .p-if{
-background-color: $grey;
+background-color: $dark_grey;
 //we can also do the same preparation as in previous example
 //but with just if-else statements (for single entry point)
   @if $type == info {
