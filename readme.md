@@ -3,6 +3,9 @@
 ## Dependencies:
   SASS, LESS
 
+## Prerequisites:
+  You should know something about html and what tags are. To check your knowledge, you can go and test yourself here: https://www.w3schools.com/quiztest/quiztest.asp
+
 ## Sequence to go through examples:
   1. /html/catHTML4.html - taken example from Elizabeth Castro, HTML4 example - later used as base for task to rewrite using HTML5 tags
   2. /html/samplehtml5.html - simple example of a html file with some structure, can be used to test different HTML5 elements without css

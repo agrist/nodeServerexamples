@@ -4,11 +4,11 @@ height: 150px;
 width: 300px;
 border: 1px solid green;
 background: radial-gradient(red, yelow);
-#	background: linear-gradient(to left, grey, navy);
-border-top-right-radius: 15px;
-#border-bottom-right-radius: 15px;
-border-bottom-left-radius: 15px;
-#border-top-left-radius: 10px
+#background: linear-gradient(to left, grey, navy);
+border-top-right-radius: 51px;
+border-bottom-right-radius: 51px;
+border-bottom-left-radius: 51px;
+border-top-left-radius: 50px
 }
 
 li {
@@ -20,13 +20,17 @@ li {
     float: left;
     padding: 15px;
     border: 1px solid blue;
-	
+
 	#border-radius: <top left> <top right> <bottom right> <bottom left>
 	#border-radius: 4px 35px 12px 10px;
 	#transform: rotate(45deg);
-	
+
 	transition: background-color 0.5s ease-in-out 0.1s;
 }
+.menu ul li { opacity: 0.5;}
+.menu ul li:hover { opacity: 1 ;}
+
+
 .menu:hover {
 	background-color: orange;
 
@@ -37,7 +41,7 @@ li {
     float: left;
     padding: 15px;
     border: 1px solid red;
-	
+
 }
 .header {
     border: 1px solid red;
@@ -45,5 +49,5 @@ li {
 	background: linear-gradient(to bottom, red, yellow);
 	opacity: 0.45;
 	transform: scale(1.2);
-	
+
 }
