@@ -12,7 +12,16 @@
   <section id="outer">
     <nav>Outer Navigation</nav>
   </section>
+<!-- Note that not all browsers have this capability, so you will need to do some script check -
 
+if ('import' in document.createElement('link')) {
+    // HTML imports are supported!
+} else {
+    // HTML imports are not supported.
+}
+
+
+-->
   <div w3-include-html="partial1.html"></div>
   <div w3-include-html="partial2.html"></div>
   <script>

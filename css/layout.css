@@ -1,5 +1,5 @@
 body{
-  background-color: #475A36;
+  background-color: #92AF79;
 }
 .underbanner div {
    width: 100%;
@@ -12,13 +12,14 @@ body{
 #page {
   display: grid;
   width: 100%;
-  height: 80%;
+  height: 95vh; /* view port - takes it from the windows size not from parent! The property "90vh" can be read as "90% of view height" */
+
   border: 1px solid #608D39 ;
   grid-template-areas: "head head head"
                        "nav  main side"
                        "foot  foot foot";
-  grid-template-rows: 150px 1fr 5%;
-  grid-template-columns: 20% 1fr 20%;
+  grid-template-rows: 15% 1fr 5%;
+  grid-template-columns: 20% 1fr 25%;
 }
 
 #page > header {
@@ -36,11 +37,16 @@ body{
 
 #page > main {
   grid-area: main;
+/*  max-height: 600px; */
+  scroll-behavior: auto;
+  overflow: auto;
 }
 
 #page > footer {
   grid-area: foot;
   background-color: #2C4937 ;
+  color: white;
+  text-align: center;
 }
 #page > aside {
   grid-area: auto / auto / auto;
@@ -49,6 +55,22 @@ body{
   text-align: center;
 }
 
+nav > ul > li {
+  display: block;
+  height: 20px;
+  width: 75%;
+  background-color: #B6BEAF;
+  border: 1px solid #000;
+}
 aside > header {
   font-size: 1.2em;
+}
+
+@media screen and (orientation:portrait){
+
+
+}
+@media screen and (orientation:landscape){
+
+
 }

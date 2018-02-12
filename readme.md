@@ -30,5 +30,8 @@
   * http://lesscss.org
   * https://developer.mozilla.org/en-US/docs/Web/HTML/Element
   * https://developer.mozilla.org/en-US/docs/Web/CSS
+  * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
+  * http://blog.teamtreehouse.com/introduction-html-imports
   * https://www.w3schools.com/css/
   * https://www.w3.org/TR/css-grid-1/
+  * http://paletton.com  -  can be used to find color schemas and do a quick check on how different variations will look in a webpage
