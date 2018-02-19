@@ -1,6 +1,7 @@
 var counter = {
   count: 0,
-  endTime: 240
+  endTime: 240,
+  items: ['azure','coral','moccasin','olive','olivedrab','maroon','lawngreen','lightgray','red', 'blue', 'yellow', 'green', 'grey', 'purple']
 };
 
 
@@ -17,7 +18,9 @@ counter.countdown = function(timingobj , callback){
               count = startAt;
                 console.log('Started countdown');
                     interval =   setInterval(function () {
-                      console.log(count);
+
+                      document.body.style.backgroundColor = counter.items[Math.floor(Math.random()*counter.items.length )];
+                      console.log(count + "  :  " +  document.body.style.backgroundColor);
                       count = count + 1;
                       if(count >= endAt){
                           count = 0;
@@ -33,4 +36,4 @@ counter.countdown = function(timingobj , callback){
   //    }
 };
 
-//counter.countdown({startAt:10, endAt:20});
+counter.countdown({startAt:0, endAt:3},counter.countdown({startAt:6, endAt:12}));

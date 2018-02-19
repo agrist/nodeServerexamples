@@ -37,4 +37,4 @@
   * http://paletton.com  -  can be used to find color schemas and do a quick check on how different variations will look in a webpage
   * https://github.com/thedaviddias/front-end-checklist  - modern website checklist of things to have/implement
   * https://github.com/chalarangelo/30-seconds-of-code   - Javascript snippets
-  * https://github.com/k88hudson/git-flight-rules
+  * https://github.com/k88hudson/git-flight-rules - everything on using git

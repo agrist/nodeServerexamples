@@ -6,24 +6,20 @@ $red: #8B0000;
 //maps can be used for a multitude of variables
 $cols:("success": #0f0, "purple": #800080,"teal": #008080, "error" : #8B0000, "warning": #FFE63B );
 
-$type: warning;
+$type: error;
 
 .p-if{
 background-color: $dark_grey;
 //we can also do the same preparation as in previous example
 //but with just if-else statements (for single entry point)
 //TODO : optimize this code to only one call
-  @if $type == info {
-    color: $grey;
-  }@else if $type == success{
+
+  color: map-get($cols, $type);
+
+  @if $type == success{
     @debug "All good here";
-    color: $green;
-  }@else if $type == warning {
-    @warn "There is some warnings found!";
-    color: $yellow;
-  }@else if $type == error{
-    @warn "There is some error found!!";
-    color: $error;
+  }@else {
+    @warn "There is some " + $type + " found!";
   }
 
 }

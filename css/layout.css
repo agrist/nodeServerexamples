@@ -61,6 +61,7 @@ nav > ul > li {
   width: 75%;
   background-color: #B6BEAF;
   border: 1px solid #000;
+  padding: 1px;
 }
 aside > header {
   font-size: 1.2em;
@@ -76,4 +77,10 @@ img {max-width: 100%;}
   img {max-width: 85%; }
   #page > nav {max-width: 250px;}
 
+}
+
+#test {
+      word-wrap: break-word;
+      width: 90%;
+      white-space: normal;
 }
