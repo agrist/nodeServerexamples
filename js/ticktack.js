@@ -1,6 +1,6 @@
 //TODO advanced - change the below code to be implemented in one game object
 // so to not pollute the global namespace
-
+//TODO - implement global variables to hold values for players 'x' and 'o'
 var fields = [
 {x:0 , y:0, sign: 'empty' },
 {x:0 , y:1, sign: 'empty' },
