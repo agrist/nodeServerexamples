@@ -16,22 +16,16 @@ function parseAge(age){
 }
 
 
-
-
-
-var recursion2 = function(thing){return thing === 0 ? 1 : thing*recursion2(thing-1);}
-
-
 function recursion (thing){
   if(!isNaN(thing)){
 
     if(thing <= 1){
-      console.log('input to function: ' + thing);
+       note('input to function: ' + thing);
        return 1;
      }else {
-      console.log('input to function: ' + thing);
+      note('input to function: ' + thing);
       var a = recursion(thing-1)*thing;
-      console.log(' we got something back! ' + a);
+      note(' we got something back! ' + a);
       return a;
     }
   }else{
@@ -39,3 +33,6 @@ function recursion (thing){
     return 1;
   }
 }
+
+//Shortform without the console.log's and type checks:
+var recursion2 = function(thing){return thing === 0 ? 1 : thing*recursion2(thing-1);}

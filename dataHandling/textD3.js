@@ -18,6 +18,10 @@ for (var letter in satText){
   (letterMap[satText[letter]] != undefined) ? letterMap[satText[letter]] += 1 : letterMap[satText[letter]]=1;
 }
 console.log(letterMap);
+
+const JSONToFile = (obj, filename) => fs.writeFile(`${filename}.json`, JSON.stringify(obj, null, 2));
+
+JSONToFile(letterMap, 'satJsonFile');
 /*
 console.log(letterMap['a']);
 var eee = 'b';
