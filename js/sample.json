@@ -1,0 +1,33 @@
+{
+  color: "brown",
+  [
+    {
+      name: "apple",
+      type: "fruit",
+      color: "red"
+    },
+    {
+      name: "apple",
+      type: "fruit",
+      size: "small",
+      taste: "sugary"
+    },
+    {
+      name: "pineapple",
+      type: "fruit",
+      weight: 1,
+      measureUnits: "kg"
+    },
+    {
+      name: "mango",
+      type: "fruit",
+      ageOutOfMarket: 3,
+      measureUnits: "days"
+    },
+    {
+      name: "strawberry",
+      type: "fruit",
+      status: "squished"
+    }
+  ]
+}

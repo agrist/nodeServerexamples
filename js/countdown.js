@@ -5,6 +5,7 @@ var counter = {
 };
 
 
+
 counter.countdown = function(timingobj , callback){
   var interval,      count=0,      startAt=0,      endAt=0;
 
@@ -36,4 +37,4 @@ counter.countdown = function(timingobj , callback){
   //    }
 };
 
-counter.countdown({startAt:0, endAt:3},counter.countdown({startAt:6, endAt:12}));
+counter.countdown({startAt:0, endAt:30},counter.countdown({startAt:6, endAt:12}));

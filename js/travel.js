@@ -1,7 +1,7 @@
 var app = {
     counter: 0,
     //images taken from http://travel.nationalgeographic.com/travel/travel-photos/
-    images: ['0', 'lighthouse', 'fishermen', 'color park', 'wind turbines', 'white', 'cloudland', 'stream'],
+    images: ['0', 'lighthouse is fancy', 'fishermen', 'color park', 'wind turbines', 'white', 'cloudland', 'stream'],
     change: false,
     updateImage: function() {
         if (this.change) {
