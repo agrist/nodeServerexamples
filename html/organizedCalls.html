@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>  How to call service API multiples in one page with return data  </title>
+        <script src="../js/utilOrganized.js"></script>
+  </head>
+  <body>
+<!-- <form  action = "http://127.0.0.1:8090/seeSecuretext" method = "POST"> -->
+<form id="userform" action="http://127.0.0.1:3004/users" method="POST">
+  Username: <input type = "text" name="username">  <br>
+  Name: <input type = "text" name="name">  <br>
+  Password: <input type = "password" name="password">
+  Profession: <input type = "text" name="profession">  <br>
+  <input type = "submit" value = "Submit">
+</form>
+
+ <button type="button" onclick="retrieveList('http://localhost:3004/users', putListInPage);">Click Me for API call!</button>
+
+    <div id="endResult"> </div>
+<br/>
+
+<form id="single">
+  ID: <input id="singleID" type="text" name="id" /><br />
+<input type="submit" onclick="singleCall()" value="Single ID find">
+</form>
+
+<form id="single">
+  ID: <input id="updateID" type="text" name="id" /><br />
+<input type="submit" onclick="updateCall()" value="Single ID to change">
+</form>
+<!-- be careful with the loading order and conectivity
+
+  </body>
+</html>

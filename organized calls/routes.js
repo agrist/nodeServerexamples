@@ -10,9 +10,9 @@ module.exports = function(app){
  var users = require('./controllers/users');
     app.get('/users',users.findAll);
     app.post('/users', users.add);
-    app.put('/users/:id', users.update);
-    app.delete('/users/:id', users.delete);
-    //app.get('/import', users.import);
+    app.post('/users/update', users.update);
+    app.post('/users/delete', users.delete);
+    app.post('/user', users.findByName);
 
     app.get('/hello', function(req, res) {
 	    res.send('Hello User, please use the correct file structure! \n');
