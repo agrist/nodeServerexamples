@@ -7,29 +7,25 @@
   </head>
   <body>
 <!-- <form  action = "http://127.0.0.1:8090/seeSecuretext" method = "POST"> -->
-<form id="userform" action="http://127.0.0.1:3004/users" method="POST">
-  Username: <input type = "text" name="username">  <br>
+<form id="userform" action="http://127.0.0.1:3004/user" method="POST">
+  Username: <input type = "text" name="username">
   Name: <input type = "text" name="name">  <br>
   Password: <input type = "password" name="password">
   Profession: <input type = "text" name="profession">  <br>
   <input type = "submit" value = "Submit">
 </form>
 
- <button type="button" onclick="retrieveList('http://localhost:3004/users', putListInPage);">Click Me for API call!</button>
-
-    <div id="endResult"> </div>
 <br/>
 
-<form id="single">
+<form id="single" target="frame">
   ID: <input id="singleID" type="text" name="id" /><br />
-<input type="submit" onclick="singleCall()" value="Single ID find">
+<input type="submit" onclick="singleCall('http://localhost:3004/user/id' , true, putListInPage)" value="Single ID find">
+ <button type="button" onclick="singleCall('http://localhost:3004/user/update', true, putListInPage)" >Single ID to change</button>
+ <button type="button" onclick="retrieveList('http://localhost:3004/users', putListInPage);">Click Me for API call!</button>  <br/>
 </form>
 
-<form id="single">
-  ID: <input id="updateID" type="text" name="id" /><br />
-<input type="submit" onclick="updateCall()" value="Single ID to change">
-</form>
-<!-- be careful with the loading order and conectivity
+<div id="endResult"> </div>
 
+<iframe name="frame" style="display: none"></iframe>
   </body>
 </html>

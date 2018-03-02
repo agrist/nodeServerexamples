@@ -36,6 +36,8 @@ exports.add = function(req, res) {
 
 
 exports.update = function(req, res) {
+  console.log("update");
+  console.log(req.body);
   var findingQuery = {'_id':req.body.id};
   var newvalues = {$set: {name: "NewDwarf", profession: "Baker", user:"dwarf12"}};// will set specific fields to given values
   user.updateOne(findingQuery, newvalues, function(err, res) {
@@ -58,9 +60,11 @@ exports.delete = function(req, res) {
 };
 
 
-exports.findByName = function(req, res) {
-  var name = req.body.name || req.params.name;// || 'sleepy';
-  user.find({'name': name},function(err, results){
+exports.findById = function(req, res) {
+  console.log(" Find by Id");
+  console.log(req.body);
+  var id = req.body.id;
+  user.find({'_id': id},function(err, results){
     console.log(results);
     return res.send(results);
   });

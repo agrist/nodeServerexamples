@@ -31,7 +31,7 @@ function retrieveList(url, callback){
 //retrieveList('localhost:3004/users', putListInPage);
 
 
-var singleCall = function(){
+var singleCall = function(url,showResults, callback){
   var xmlhttp;
   var DONE = 4; // readyState 4 means the request is done.
   var OK = 200; // status 200 is a successful return.
@@ -40,19 +40,17 @@ var singleCall = function(){
   xmlhttp.onload = function(){
       if (xmlhttp.readyState == DONE && xmlhttp.status == OK){
           console.log(xmlhttp.responseText);
-          document.getElementById('endResult').innerHTML = JSON.parse(xmlhttp.responseText);
-          //callback(JSON.parse(xmlhttp.responseText));
+          if(showResults){
+            document.getElementById('endResult').innerHTML = JSON.parse(xmlhttp.responseText);
+            callback(JSON.parse(xmlhttp.responseText));
+          }
       }else {
         console.log('Error: ' + xmlhttp.status); // An error occurred during the request.
       }
   }
-  var textUrl = 'http://localhost:3004/user/'+document.getElementById('singleID').value;
-  xmlhttp.open("POST", textUrl, true);
-  xmlhttp.send();
-}
-
-var updateCall - function(){
-  //TODO create a function to be called to url "http://localhost:3004/users/update"
-  //TODO pass information from the created form in html file to the call
-  //TODO update the information in the list with all users (hint - use existing functions)
+// 'http://localhost:3004/user'; OR 'http://localhost:3004/users/update';
+  var params = "id="+ document.getElementById('singleID').value;
+  xmlhttp.open("POST", url, true);
+  xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  xmlhttp.send(params);
 }
