@@ -6,6 +6,7 @@ var UserSchema = new Schema({
   name: String,
   password: String,
   profession: String,
+  artstyle: Array,
   id: Number
 });
 

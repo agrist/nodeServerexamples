@@ -1,20 +1,23 @@
 [
-  {  "user":"user1", 
+  {  "user":"user1",
      "name" : "grumpy",
 	  "password" : "dwarf1",
 	  "profession" : "miner",
+    "artstyle": ["Abstract expressionism","Impressionism"],
 	  "id": 1
    },
    {  "user":"user2",
       "name" : "smiley",
 	  "password" : "dwarf2",
 	  "profession" : "explosives expert",
+    "artstyle": ['High Renaissance', 'Northen Renaissance'],
 	  "id": 2
    },
    {  "user":"user3",
       "name" : "sleepy",
 	  "password" : "dwarf3",
 	  "profession" : "clerk",
+    "artstyle": "Baroque",
 	  "id": 3
    }
 ]
