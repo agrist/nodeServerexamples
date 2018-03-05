@@ -16,9 +16,12 @@ exports.findByStyle = function(req, res) {
 };
 
 exports.add = function(req, res) {
-    var painter = mongoose.model('Painter', Painter);
-  //  painter.
-  //  Painter.insert
+  Painter.find({style: {$in:['High Renaissance', 'Northen Renaissance']}}, function(err, results){
+   if(err){
+     console.log(err);
+   }
+   return res.send(results);
+ });
 };
 exports.update = function(req, res) {};
 exports.delete = function(req, res) {};
