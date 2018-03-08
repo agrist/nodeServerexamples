@@ -4,13 +4,15 @@
 	  "password" : "dwarf1",
 	  "profession" : "miner",
     "artstyle": ["Abstract expressionism","Impressionism"],
+    "ledit":"151672050900",
 	  "id": 1
    },
    {  "user":"user2",
       "name" : "smiley",
 	  "password" : "dwarf2",
 	  "profession" : "explosives expert",
-    "artstyle": ['High Renaissance', 'Northen Renaissance'],
+    "artstyle": ["High Renaissance", "Northen Renaissance"],
+    "ledit":"151673010900",
 	  "id": 2
    },
    {  "user":"user3",
@@ -18,6 +20,7 @@
 	  "password" : "dwarf3",
 	  "profession" : "clerk",
     "artstyle": "Baroque",
+    "ledit":"151672010900",
 	  "id": 3
    }
 ]

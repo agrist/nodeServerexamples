@@ -7,7 +7,8 @@ var UserSchema = new Schema({
   password: String,
   profession: String,
   artstyle: Array,
-  id: Number
+  id: Number,
+  ledit: String
 });
 
 mongoose.model('users', UserSchema);

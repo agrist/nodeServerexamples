@@ -19,6 +19,7 @@ exports.add = function(req, res) {
     //short version, but still might cause problems with "falsy" values
     userObj.password = req.body.password || "pass123";//obvious security flaw is obvious
     userObj.profession = req.body.profession || "miner";
+    userObj.ledit= new Date().valueOf();
 
     console.log(userObj);
     //user.insert(userObj);
