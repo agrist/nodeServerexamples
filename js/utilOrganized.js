@@ -4,7 +4,7 @@ var putListInPage = function(retrievedList){
      var current = retrievedList[obj];
 
      var row = document.createElement('div');
-     let ledit = new Date(parseInt(current.ledit));//works in milliseconds from 1970, needs a number! 
+     let ledit = new Date(parseInt(current.ledit));//works in milliseconds from 1970, needs a number!
      row.innerHTML += "id: "+ current._id +"  name: "+ current.name + " , profession:  " + current.profession  + "  , last edited: " + ledit;
      document.getElementById('endResult').appendChild(row);
    }
@@ -16,7 +16,9 @@ function retrieveList(url, callback){
     var OK = 200; // status 200 is a successful return.
     // compatible with IE7+, Firefox, Chrome, Opera, Safari
     xmlhttp = new XMLHttpRequest();
-  //  let newUrl = encodeURIComponent(url);
+    let newUrl = encodeURIComponent(url);
+    console.log(newUrl);
+    console.log(url);
     xmlhttp.onload = function(){
         if (xmlhttp.readyState == DONE && xmlhttp.status == OK){
             console.log(xmlhttp.responseText);
@@ -54,7 +56,7 @@ var singleCall = function(url,showResults, callback){
       }
   }
 
-  xhr.onerror = function() {
+  xmlhttp.onerror = function() {
     console.log('There was an error!');
   };
 
