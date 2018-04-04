@@ -15,9 +15,9 @@ for retrieving
 npm install mongoose --save-dev
 
 for import file to mongo
-mongoimport --db name -- collection --jsonArray --file data_users.json
+mongoimport --db name --collection users --jsonArray --file data_users.json
 
-for finding all: 
+for finding all:
 show collections
 db.forshowUsers.find()
 db.forshowUsers.find({'password':'dwarf2'})

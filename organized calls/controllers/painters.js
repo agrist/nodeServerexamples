@@ -23,5 +23,19 @@ exports.add = function(req, res) {
    return res.send(results);
  });
 };
-exports.update = function(req, res) {};
+
+exports.update = function(req, res) {
+    Painter.update(
+    {'id': req.params.id},
+    {
+      $set: {
+         name: req.params.name,
+         style: req.params.style,
+         birthy: req.params.birthy,
+         deathy: deathy,
+         notes: req.params.notes,
+         ledit: Date.now
+       }
+    });
+};
 exports.delete = function(req, res) {};
